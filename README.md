@@ -20,7 +20,7 @@ Criar um aplicativo que exiba piadas para Alex contar para seus amigos.
 * Fazer consulta a uma API
 * Uma única tela é suficiente mas você é livre para fazer o aplicativo como quiser
 
-### Opcional
+### Entrega
 
 * Criar uma conta no GitHub e clonar esse projeto
 * Commitar o código fonte
