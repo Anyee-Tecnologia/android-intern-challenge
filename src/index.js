@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {
       View,
       StyleSheet, Text, Image,
-      TouchableOpacity, Dimensions
+      ActivityIndicator,TouchableOpacity
 } from 'react-native';
 
 import Header from './header';
@@ -11,7 +11,7 @@ import Loading from './loading';
 export default class App extends Component{
   constructor(props){
     super(props);
-    this.state =  {isLoading: true, biggest: false}
+    this.state =  {isLoading: true, ready:false}
     
 
   };  
@@ -29,6 +29,7 @@ export default class App extends Component{
       id: responseJson.id,
       url: responseJson.url,
       value: responseJson.value,
+      ready: true
            
     }, function(){});
     
@@ -41,6 +42,7 @@ export default class App extends Component{
  
   change = () =>{
     this.getJoke();
+    this.setState({ready:false})
     
    
   }
@@ -77,8 +79,14 @@ export default class App extends Component{
 
         <View style = {{backgroundColor:'#f8f8ff'}}>         
             <TouchableOpacity  style = {styles.button} 
-              onPress = {this.change}> 
-              <Text style = {{color:'white'}}>TELL ME ANOTHER JOKE !</Text> 
+              onPress = {this.change}>
+              {
+                this.state.ready
+              ?
+              <Text style = {{color:'white'}}>TELL ME ANOTHER JOKE !</Text> :
+              <ActivityIndicator size="large" color="white" />
+              }
+
             </TouchableOpacity>
         </View>  
 
