@@ -5,8 +5,8 @@ import {
       ActivityIndicator,TouchableOpacity
 } from 'react-native';
 
-import Header from './header';
-import Loading from './loading';
+import Header from './src/header';
+import Loading from './src/loading';
 
 export default class App extends Component{
   constructor(props){
