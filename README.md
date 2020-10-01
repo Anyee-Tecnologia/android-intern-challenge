@@ -12,6 +12,10 @@ Alex é uma pessoa que sempre está com o celular em mãos, participa de muitos 
 ### Solução
 
 Criar um aplicativo que exiba piadas para Alex contar para seus amigos.
+#### Window
+1.create-react-native-app folder_name
+2. cd folder_name yoou created 
+3.npm start
 
 ## Instruções
 
